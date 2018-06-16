@@ -63,6 +63,7 @@ public class TouchManager : MonoBehaviour {
                 initTouch = new Touch();
             }
 
+            //if fire1 (if we want to shoot) then CALL the shoot function of the gun????
             if (Input.GetButton("Fire1"))
             {
                 Debug.Log("test");
