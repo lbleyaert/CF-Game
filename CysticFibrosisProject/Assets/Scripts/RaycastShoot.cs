@@ -17,7 +17,7 @@ public class RaycastShoot : MonoBehaviour {
     //add audiosource at some point
     private LineRenderer shotLine;
     //nextFire holds the time at which the player can fire again
-    private float nextFire;
+    private float nextFire = 0.0f;
 
 	
 	void Start () {
@@ -30,14 +30,67 @@ public class RaycastShoot : MonoBehaviour {
 	
 	
 	void Update () {
-		if(Input.GetButtonDown("Fire1") && Time.time > nextFire)
+
+//		if(Input.GetButtonDown("Fire1") && Time.time > nextFire)
+ //       {
+  //          nextFire = Time.time + fireRate;
+//
+ //           StartCoroutine(ShotEffect());
+//
+//            //origin positioned at the center of the camera 
+//            Vector3 rayOrigin = fpsCamera.ViewportToWorldPoint(new Vector3 (0.5f, 0.5f, 0.0f));
+//            RaycastHit hit;
+
+            //need to establish initial position of the line (need 2 points for the line to be drawn)
+            //0 below is "position 0" of line 
+//            shotLine.SetPosition(0, gunEnd.position);
+
+            //if raycast hits something...
+ //           if (Physics.Raycast(rayOrigin, fpsCamera.transform.forward, out hit, gunRange))
+ //           {
+ //               EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
+                //if what we shot is an enemy, then we're going to do damage to its health
+ //               if(enemyHealth != null)
+  //              {
+  //                  enemyHealth.TakeDamage(damagePerShot);
+  //              }
+
+                //whether or not we hit an enemy or just an object, the line will be drawn
+//                shotLine.SetPosition(1, hit.point);
+ //               Debug.Log("PEW - hit object or enemy");
+
+                /*
+                if (hit.transform.gameObject.tag == "Enemy")
+                {
+                    Destroy(hit.transform.gameObject);
+                    //here you will want to instantiate some sort of VFX for destruction of enemy
+                }*/
+
+ //           }
+            //otherwise...
+  //          else
+  //          {
+  //              shotLine.SetPosition(1, rayOrigin + (fpsCamera.transform.forward * gunRange));
+  //              Debug.Log("No hit");
+  //          }
+
+
+
+  //      }//end of if (for if user is firing AND are allowed to fire again)
+
+	}
+
+
+    public void Shoot()
+    {
+        if (Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
 
             StartCoroutine(ShotEffect());
 
             //origin positioned at the center of the camera 
-            Vector3 rayOrigin = fpsCamera.ViewportToWorldPoint(new Vector3 (0.5f, 0.5f, 0.0f));
+            Vector3 rayOrigin = fpsCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
             RaycastHit hit;
 
             //need to establish initial position of the line (need 2 points for the line to be drawn)
@@ -49,14 +102,14 @@ public class RaycastShoot : MonoBehaviour {
             {
                 EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
                 //if what we shot is an enemy, then we're going to do damage to its health
-                if(enemyHealth != null)
+                if (enemyHealth != null)
                 {
                     enemyHealth.TakeDamage(damagePerShot);
                 }
 
                 //whether or not we hit an enemy or just an object, the line will be drawn
                 shotLine.SetPosition(1, hit.point);
-                Debug.Log("PEW - hit object or enemy");
+                Debug.Log("PEW - hit object or enemy  :D");
 
                 /*
                 if (hit.transform.gameObject.tag == "Enemy")
@@ -76,9 +129,8 @@ public class RaycastShoot : MonoBehaviour {
 
 
 
-        }//end of if (for if user is firing AND are allowed to fire again)
-	}
-
+        }
+    }
 
 
     private IEnumerator ShotEffect()

@@ -8,6 +8,8 @@ public class TouchManager : MonoBehaviour {
     //public Text touchText;
     public Transform gunEnd;
     public Camera fpsCamera;
+    public GameObject gun;
+    public Button fireButton;
 
     //private Touch myTouch;
 
@@ -21,9 +23,15 @@ public class TouchManager : MonoBehaviour {
     //vector3 will store current rotation
     private Vector3 originRot;
 
+    private RaycastShoot raycastShoot;
+  
+
     // Use this for initialization
     void Start()
     {
+
+        raycastShoot = gun.GetComponent<RaycastShoot>();
+       
         //store original rotation
         originRot = fpsCamera.transform.eulerAngles;
         rotX = originRot.x;
@@ -36,6 +44,15 @@ public class TouchManager : MonoBehaviour {
 
         foreach (Touch touch in Input.touches)
         {
+
+            //fireButton.spriteState 
+            //if touch is on the fire button??????? then shoot? 
+          /* if (fireButton.)
+            {
+
+            }*/
+
+
             //if touch has just begun
             if(touch.phase == TouchPhase.Began)
             {
@@ -52,7 +69,7 @@ public class TouchManager : MonoBehaviour {
                 //subrated current rotations by 
                 rotX -= deltaY * Time.deltaTime * rotSpeed * dir;
                 rotY += deltaX * Time.deltaTime * rotSpeed * dir;
-                //clamp rotation
+                //clamp rotation so it can't go past certain angles in each direction
                 rotX = Mathf.Clamp(rotX, -60.0f, 65.0f);
                 rotY = Mathf.Clamp(rotY, -75.0f, 75.0f);
 
@@ -64,10 +81,10 @@ public class TouchManager : MonoBehaviour {
             }
 
             //if fire1 (if we want to shoot) then CALL the shoot function of the gun????
-            if (Input.GetButton("Fire1"))
-            {
-                Debug.Log("test");
-            }
+            //if (Input.GetButton("Fire1"))
+            //{
+            //    Debug.Log("test");
+            //}
 
 
 
@@ -107,6 +124,13 @@ public class TouchManager : MonoBehaviour {
     }
 
 
+
+    public void OnFireButtonPressed()
+    {
+
+        Debug.Log("PEW PEW");
+       raycastShoot.Shoot();
+    }
 
 
 
