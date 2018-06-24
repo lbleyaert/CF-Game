@@ -7,7 +7,7 @@ public class EnemyHealth : MonoBehaviour {
 
     public int startingHealth = 100;
     public int currentHealth;
-    public float sinkSpeed = 2.5f;
+    public float sinkSpeed = 1.5f;
     public int scoreValue = 1;
 
     private Animator anim;
