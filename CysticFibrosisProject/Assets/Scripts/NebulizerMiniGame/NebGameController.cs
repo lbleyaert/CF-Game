@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameController : MonoBehaviour {
+public class NebGameController : MonoBehaviour {
 
     public GameObject monster;
     public GameObject target;
@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        StartCoroutine( spawnWaves());
+        StartCoroutine( SpawnWaves());
 	}
 	
 	// Update is called once per frame
@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour {
 	}
 
 
-    IEnumerator spawnWaves()
+    IEnumerator SpawnWaves()
     {
         yield return new WaitForSeconds(startWait);
         while (true) {

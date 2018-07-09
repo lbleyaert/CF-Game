@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LoadTownSection : MonoBehaviour {
 
     //[SerializeField] private Image houseDialogueImg;
-    public Dialogue dialogue;
+   // public Dialogue dialogue;
     
 
     // Use this for initialization

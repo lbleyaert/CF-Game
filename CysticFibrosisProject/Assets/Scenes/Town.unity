@@ -624,7 +624,6 @@ GameObject:
   m_Component:
   - component: {fileID: 675703071}
   - component: {fileID: 675703070}
-  - component: {fileID: 675703072}
   m_Layer: 0
   m_Name: TownController
   m_TagString: Untagged
@@ -643,11 +642,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1558b2d9a23a11a44a5777b6e390236b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    sentences:
-    - Sentence1
-    - Sentence2
-    - Sentence3
 --- !u!4 &675703071
 Transform:
   m_ObjectHideFlags: 0
@@ -661,17 +655,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &675703072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 675703069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfc6726ed7e0ed944974989a9cb8299b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &720071502
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,7 +697,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 720071502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6757812, y: -17.4375, z: 44}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
