@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class StartNebulizerGame : MonoBehaviour {
 
     public Text dialogueText;
-    public Dialogue houseDialogue;
+    public SO_Dialogue nebulizerDialogue;
     public DialogueManagerSO dialogManagerSO;
 
     //will need to have one of these in each scene... need to ref in each scene
@@ -19,7 +19,7 @@ public class StartNebulizerGame : MonoBehaviour {
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("you've touched the nebulizer!");
-            dialogManagerSO.StartADialogue(houseDialogue, "Nebulizer3", dialogueBox, dialogueText);
+            dialogManagerSO.StartADialogue(nebulizerDialogue, dialogueBox, dialogueText);
           
         }
     }

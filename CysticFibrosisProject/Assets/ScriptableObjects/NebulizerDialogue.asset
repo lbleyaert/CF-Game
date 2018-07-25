@@ -16,4 +16,6 @@ MonoBehaviour:
     of daily care.\r"
   - Use your nebulizer to hit as many cough monsters as you can!
   - Have you done your nebulizer treatment today? ((Y/N/Plan to soon))
-  isSceneChange: 0
+  hasSceneChange: 1
+  hasQuestionAtEnd: 1
+  nextSceneName: Nebulizer3
