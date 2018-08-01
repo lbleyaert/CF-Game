@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+ <Dialogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<nodes>
+		<DialogueNode>
+			<nodeID>0</nodeID>
+			<sentence>Head home for a nebulizer treatment! Using your nebulizer is an important part of daily care.</sentence>
+			<options>
+				<DialogueOption>
+					<response>Next</response>
+					<destinationNodeID>1</destinationNodeID>
+				</DialogueOption>
+			</options>
+		</DialogueNode>
+		
+		<DialogueNode>
+			<nodeID>1</nodeID>
+			<sentence>Use your nebulizer to hit as many cough monsters as you can!</sentence>
+			<options>
+				<DialogueOption>
+					<response>Next</response>
+					<destinationNodeID>2</destinationNodeID>
+				</DialogueOption>
+			</options>
+		</DialogueNode>
+		
+		<DialogueNode>
+			<nodeID>2</nodeID>
+			<sentence>Have you done your nebulizer treatment today?</sentence>
+			<options>
+				<DialogueOption>
+					<response>Yes</response>
+					<destinationNodeID>3</destinationNodeID>
+				</DialogueOption>
+				<DialogueOption>
+					<response>No</response>
+					<destinationNodeID>4</destinationNodeID>
+				</DialogueOption>
+				<DialogueOption>
+					<response>Plan to Soon</response>
+					<destinationNodeID>5</destinationNodeID>
+				</DialogueOption>
+			</options>
+		</DialogueNode>		
+		
+		<DialogueNode>
+			<nodeID>3</nodeID>
+			<sentence>Great job!! Keep up the good work, and enjoy some extra coins :D</sentence>
+			<options>
+				<DialogueOption>
+					<response>Start Game!</response>
+					<destinationNodeID>-1</destinationNodeID>
+				</DialogueOption>
+			</options>
+		</DialogueNode>
+
+		<DialogueNode>
+			<nodeID>4</nodeID>
+			<sentence>Plan some time for it today! Using it each day will help you feel better so that you can do the things you love.</sentence>
+			<options>
+				<DialogueOption>
+					<response>Start Game!</response>
+					<destinationNodeID>-1</destinationNodeID>
+				</DialogueOption>
+			</options>
+		</DialogueNode>
+
+		<DialogueNode>
+			<nodeID>5</nodeID>
+			<sentence>Awesome! Let us know when you do, and you'll get some extra coins!</sentence>
+			<options>
+				<DialogueOption>
+					<response>Start Game!</response>
+					<destinationNodeID>-1</destinationNodeID>
+				</DialogueOption>
+			</options>
+		</DialogueNode>     
+		
+	</nodes>
+ </Dialogue>

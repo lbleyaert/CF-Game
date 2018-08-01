@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+ <Dialogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	 <nodes>
+		 <DialogueNode>
+		  <nodeID>0</nodeID>
+      <sentence>Welcome to town! Are you a new resident or current resident?</sentence>
+		  <options>
+			  <DialogueOption>
+          <response>New Resident</response>
+				  <destinationNodeID>1</destinationNodeID>
+			  </DialogueOption>
+			  <DialogueOption>
+          <response>Current Resident</response>
+				  <destinationNodeID>2</destinationNodeID>
+			  </DialogueOption>
+		  </options>
+	  </DialogueNode>
+		
+	  <DialogueNode>
+		  <nodeID>1</nodeID>
+      <sentence>Glad to have you here! Moving to a new place and taking care of yourself can be difficult, but we're here to help.</sentence>
+		  <options>
+			  <DialogueOption>
+          <response>Next</response>
+				  <destinationNodeID>3</destinationNodeID>
+			  </DialogueOption>
+		  </options>
+	  </DialogueNode>
+		
+	  <DialogueNode>
+		  <nodeID>2</nodeID>
+      <sentence>Good to see you!</sentence>
+		  <options>
+			  <DialogueOption>
+          <response>Continue..login..</response>
+				  <destinationNodeID>-1</destinationNodeID>
+			  </DialogueOption>
+		  </options>
+	  </DialogueNode>		
+		
+	  <DialogueNode>
+		  <nodeID>3</nodeID>
+      <sentence>Here, we all have cystic fibrosis and are taking steps each day to feel our best.</sentence>
+		  <options>
+			  <DialogueOption>
+          <response>Next</response>
+				  <destinationNodeID>4</destinationNodeID>
+			  </DialogueOption>
+		  </options>
+	  </DialogueNode>
+
+     <DialogueNode>
+       <nodeID>4</nodeID>
+       <sentence>There are some things you should do everyday day like use your nebulizer, eat the right foods, and exercise.</sentence>
+       <options>
+         <DialogueOption>
+           <response>Next</response>
+           <destinationNodeID>5</destinationNodeID>
+         </DialogueOption>
+       </options>
+     </DialogueNode>
+
+     <DialogueNode>
+       <nodeID>5</nodeID>
+       <sentence>Help your character do these activities, and follow along with them in your own life!</sentence>
+       <options>
+         <DialogueOption>
+           <response>Next</response>
+           <destinationNodeID>6</destinationNodeID>
+         </DialogueOption>
+       </options>
+     </DialogueNode>     
+     
+
+
+     <DialogueNode>
+	    <nodeID>6</nodeID>
+      <sentence>If you finish all your activities during the day, you'll start to build up a day streak! Keep completing them each day to add to that streak, and see the rewards you'll unlock!</sentence>
+		  <options>
+			  <DialogueOption>
+          <response>Get Started!</response>
+				  <destinationNodeID>-1</destinationNodeID>
+			  </DialogueOption>
+		  </options>
+	   </DialogueNode>	
+		
+		
+	 </nodes>
+ </Dialogue>
+

@@ -27,58 +27,6 @@ public class RaycastShoot : MonoBehaviour {
         fpsCamera = GetComponentInParent<Camera>();
 
 	}
-	
-	
-	void Update () {
-
-//		if(Input.GetButtonDown("Fire1") && Time.time > nextFire)
- //       {
-  //          nextFire = Time.time + fireRate;
-//
- //           StartCoroutine(ShotEffect());
-//
-//            //origin positioned at the center of the camera 
-//            Vector3 rayOrigin = fpsCamera.ViewportToWorldPoint(new Vector3 (0.5f, 0.5f, 0.0f));
-//            RaycastHit hit;
-
-            //need to establish initial position of the line (need 2 points for the line to be drawn)
-            //0 below is "position 0" of line 
-//            shotLine.SetPosition(0, gunEnd.position);
-
-            //if raycast hits something...
- //           if (Physics.Raycast(rayOrigin, fpsCamera.transform.forward, out hit, gunRange))
- //           {
- //               EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
-                //if what we shot is an enemy, then we're going to do damage to its health
- //               if(enemyHealth != null)
-  //              {
-  //                  enemyHealth.TakeDamage(damagePerShot);
-  //              }
-
-                //whether or not we hit an enemy or just an object, the line will be drawn
-//                shotLine.SetPosition(1, hit.point);
- //               Debug.Log("PEW - hit object or enemy");
-
-                /*
-                if (hit.transform.gameObject.tag == "Enemy")
-                {
-                    Destroy(hit.transform.gameObject);
-                    //here you will want to instantiate some sort of VFX for destruction of enemy
-                }*/
-
- //           }
-            //otherwise...
-  //          else
-  //          {
-  //              shotLine.SetPosition(1, rayOrigin + (fpsCamera.transform.forward * gunRange));
-  //              Debug.Log("No hit");
-  //          }
-
-
-
-  //      }//end of if (for if user is firing AND are allowed to fire again)
-
-	}
 
 
     public void Shoot()
@@ -109,21 +57,12 @@ public class RaycastShoot : MonoBehaviour {
 
                 //whether or not we hit an enemy or just an object, the line will be drawn
                 shotLine.SetPosition(1, hit.point);
-                Debug.Log("PEW - hit object or enemy  :D");
-
-                /*
-                if (hit.transform.gameObject.tag == "Enemy")
-                {
-                    Destroy(hit.transform.gameObject);
-                    //here you will want to instantiate some sort of VFX for destruction of enemy
-                }*/
 
             }
             //otherwise...
             else
             {
                 shotLine.SetPosition(1, rayOrigin + (fpsCamera.transform.forward * gunRange));
-                Debug.Log("No hit");
             }
 
 
@@ -145,3 +84,10 @@ public class RaycastShoot : MonoBehaviour {
 
 
 }
+
+
+/*Used following tutorial for raycast shooting:
+ * tutorial showed many things such as displaying the line of the shot, checking if an item was hit or not, preventing player
+ * from shooting right after they shot (pause between shots), 
+ * https://unity3d.com/learn/tutorials/lets-try/shooting-with-raycasts
+ */

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccc5c11be5df55e4a8655ab762f77cd7, type: 3}
+  m_Name: SO_Start Dialogue
+  m_EditorClassIdentifier: 
+  nodeText: {fileID: 0}
+  responsePanel: {fileID: 0}
+  btnOptionOne: {fileID: 0}
+  btnOptionTwo: {fileID: 0}
+  btnOptionThree: {fileID: 0}
+  dialogueWindowPrefab: {fileID: 1743952351870910, guid: 9fba077f0424b5e4c87cf4dbd072e4e1,
+    type: 2}

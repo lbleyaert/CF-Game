@@ -120,7 +120,7 @@ public class PlayerTownMovement : MonoBehaviour {
         if(NavMesh.SamplePosition(pData.pointerCurrentRaycast.worldPosition,out hit, navMeshSampleDistance, NavMesh.AllAreas))
         {
             destinationPosition = hit.position;
-            Debug.Log("Destination: " + destinationPosition); 
+            //Debug.Log("Destination: " + destinationPosition); 
         }
         else
         {   
@@ -137,3 +137,9 @@ public class PlayerTownMovement : MonoBehaviour {
 
 
 }
+
+
+/*Used Unity's Adventure Game tutorial for player movement:
+ * https://unity3d.com/learn/tutorials/projects/adventure-game-tutorial/player?playlist=44381
+ * https://unity3d.com/learn/tutorials/projects/adventure-game-tutorial/player-continued?playlist=44381
+ */

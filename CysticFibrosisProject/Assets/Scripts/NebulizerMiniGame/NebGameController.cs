@@ -46,3 +46,8 @@ public class NebGameController : MonoBehaviour {
 
 
 }
+
+/*Used Unity Space Shooter tutorial for spawning waves of enemies:
+ * https://unity3d.com/learn/tutorials/projects/space-shooter/spawning-waves?playlist=17147
+ * random instantiation locations of enemies, wait time between instantiations, etc
+ */

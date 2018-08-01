@@ -3,9 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using DialogueNamespace;
 
-public class StartNebulizerGame : MonoBehaviour {
+public class StartNebulizerGame : MonoBehaviour
+{
+    public SO_StartDialogue so_StartDialogue;
+    public string xmlFileName;
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("you've touched the nebulizer!");
+            so_StartDialogue.StartSpecificDialogue(xmlFileName);
+        }
+    }
+
+
+    /*
     public Text dialogueText;
     public SO_Dialogue nebulizerDialogue;
     public DialogueManagerSO dialogManagerSO;
@@ -23,5 +38,5 @@ public class StartNebulizerGame : MonoBehaviour {
           
         }
     }
-
+    */
 }
