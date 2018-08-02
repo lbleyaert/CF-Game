@@ -4,11 +4,11 @@ using System.IO;
 using System.Xml.Serialization;
 using UnityEngine;
 
-
 namespace DialogueNamespace
 {
     public class Dialogue
     {
+        public string transitionSceneName;
 
         public List<DialogueNode> nodes;
 

@@ -24,7 +24,7 @@ public class SO_Task : ScriptableObject {
         {
             isCompleteToday = true;
             so_TaskManager.TaskComplete();
-            Debug.Log("you completed a task! called the TaskComplete method of the " + taskName + " task!");
+            Debug.Log("you completed a task! Now calling the TaskComplete method of the " + taskName + " task!");
 
             /*
             if (OnTaskCompletion != null)

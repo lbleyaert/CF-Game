@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
  <Dialogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <transitionSceneName>Nebulizer3</transitionSceneName>
 	<nodes>
 		<DialogueNode>
 			<nodeID>0</nodeID>
-			<sentence>Head home for a nebulizer treatment! Using your nebulizer is an important part of daily care.</sentence>
+			<sentence>This is your nebulizer! Using your nebulizer is an important part of daily care.</sentence>
 			<options>
 				<DialogueOption>
 					<response>Next</response>

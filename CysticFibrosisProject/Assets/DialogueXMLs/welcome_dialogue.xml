@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
  <Dialogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <transitionSceneName>TownPersistent</transitionSceneName>
 	 <nodes>
 		 <DialogueNode>
 		  <nodeID>0</nodeID>

@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/TownPersistent.unity
     guid: 6d6b8cb26cacee04c86e63d8ef05d3ef
@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nebulizer3.unity
     guid: 92506e6aea7c8ea48853ffdef7936982
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 1df1bb43ff8ce444ca0ac96481e43a99
   m_configObjects: {}

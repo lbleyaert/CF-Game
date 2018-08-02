@@ -10,6 +10,10 @@ public class SO_DayManager : ScriptableObject {
 
     [SerializeField]
     private int totalDaysPlayed;
+    public int TotalDaysPlayed
+    {
+        get { return totalDaysPlayed; }
+    }
     //number of days in a row that the player has completed the tasks
     [SerializeField]
     private int dayStreak;

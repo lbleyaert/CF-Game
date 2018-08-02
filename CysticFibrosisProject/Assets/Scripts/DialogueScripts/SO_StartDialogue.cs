@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 namespace DialogueNamespace
 {
@@ -61,7 +63,7 @@ namespace DialogueNamespace
 
             //int nodeID = 0;
 
-            Debug.Log("number of nodes in this dialogue: " + dialogue.nodes.Count);
+            //Debug.Log("number of nodes in this dialogue: " + dialogue.nodes.Count);
             DisplayNode(dialogue.nodes[0]);
 
 
@@ -71,11 +73,7 @@ namespace DialogueNamespace
             //call run dialogue method 
         }
 
-        public void RunDialogue()
-        {
-            //can't do coroutine in a scriptable object!!!!
-            //need to find other way
-        }
+
 
         private void SetSelectedOption(int x)
         {
@@ -93,37 +91,19 @@ namespace DialogueNamespace
             {
                 //if it is equal to -1, means we're done with the dialogue 
                 Debug.Log("end of the dialogue :D :D :D");
+                Destroy(dialogueWindow.gameObject);
 
-            }
-
-        }
-
-        /*
-        public IEnumerator DialogueCoroutine()
-        {
-            //dialogueWindow.SetActive(true);
-            int nodeID = 0;
-
-            //while you're referencing an actual node and (and not the exit node indicated by id of -1)
-            while (nodeID != -1)
-            {
-                //display node function
-                DisplayNode(dialogue.Nodes[nodeID]);
-                //selectedOption is set to int that doesn't represent a node ID (-2) 
-                selectedOption = -2;
-                //while the selectedOption is -2 (meaning while the user hasn't inputted a selection)
-                while(selectedOption == -2)
+                //if there is a scene to transition to, it will transition to it
+                if(dialogue.transitionSceneName != null)
                 {
-                    yield return new WaitForSeconds(0.25f);
+                    SceneManager.LoadScene(dialogue.transitionSceneName);
                 }
+              
             }
 
-            //once an exit node (-1) has been selected, the dialogue is done and you'll leave the above while loop
-            //want to hide the dialogueWindow
-            dialogueWindow.SetActive(false);
-
         }
-        */
+
+
 
         public void DisplayNode(DialogueNode node)
         {

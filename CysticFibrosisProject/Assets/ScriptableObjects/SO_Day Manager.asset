@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: SO_Day Manager
   m_EditorClassIdentifier: 
   so_TaskManager: {fileID: 11400000, guid: 7eae988e99c0e7e488eec177f93d8756, type: 2}
-  totalDaysPlayed: 9
-  dayStreak: 1
-  longestStreak: 7
+  totalDaysPlayed: 0
+  dayStreak: 0
+  longestStreak: 6
