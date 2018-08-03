@@ -13,4 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskList:
   - {fileID: 11400000, guid: c18fadabe6e05a24fa74f4a621e9c3ea, type: 2}
-  numOfTasksComplete: 0
+  so_CoinManager: {fileID: 11400000, guid: 44da78fedecc0554581cc00ae8aef059, type: 2}
+  numOfTasksComplete: 1

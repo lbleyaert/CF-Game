@@ -27,3 +27,7 @@ public class CameraFollowPlayer : MonoBehaviour {
 
 	}
 }
+
+/*Tutorial used for camera following player:
+ * https://www.youtube.com/watch?v=urNrY7FgMao
+ */

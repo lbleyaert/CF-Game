@@ -22,3 +22,8 @@ public class ScoreManager : MonoBehaviour {
         scoreText.text = "Score: " + score;
 	}
 }
+
+/*Unity tutorial for scoring points:
+ * https://unity3d.com/learn/tutorials/projects/space-shooter-tutorial/counting-points-and-displaying-score?playlist=17147
+ * https://unity3d.com/learn/tutorials/projects/survival-shooter-tutorial/scoring-points?playlist=17144
+ */

@@ -35,3 +35,7 @@ public class EnemyMovement : MonoBehaviour {
 
 	}
 }
+
+/*Unity tutorial used for enemy movement:
+ * https://unity3d.com/learn/tutorials/projects/survival-shooter/enemy-one?playlist=17144
+ */

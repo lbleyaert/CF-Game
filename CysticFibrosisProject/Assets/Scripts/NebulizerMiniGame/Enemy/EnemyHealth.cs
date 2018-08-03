@@ -72,3 +72,7 @@ public class EnemyHealth : MonoBehaviour {
 
 
 }//end of EnemyHealth script
+
+/*Unity tutorial used for enemy scripts: 
+ * https://unity3d.com/learn/tutorials/projects/survival-shooter/harming-enemies?playlist=17144
+ */

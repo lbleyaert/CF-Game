@@ -48,35 +48,28 @@ public class DayTracker : MonoBehaviour {
         currentDateTime = DateTime.Now;
         Debug.Log("current date/time is: " + currentDateTime.ToString());
 
-        int year = currentDateTime.Year;
-        int month = currentDateTime.Month;
-        int day = currentDateTime.Day;
-
-        /*IF IT'S NOT THEIR FIRST DAY PLAYING... THEN it will check if the date has changed
-         *EXPLANATION: if it's the first day they are playing, previousDateTime will be set to 1/1/0001 12:00:00AM - so if it runs this check
-         *then it will definitely find that previousDateTime is before CurrentDateTime and will increment totalDaysPlayed incorrectly by one day*/
-        if (so_DayManager.TotalDaysPlayed != 0)
+       
+     
+        //if previous year is less than current year, then day MUST have changed
+        if(previousDateTime.Year < currentDateTime.Year)
         {
-            //if previous year is less than current year, then day MUST have changed
-            if(previousDateTime.Year < currentDateTime.Year)
-            {
-                //call a method of the day manager to change day? 
+            so_DayManager.DayHasChanged();
             
-            }
-            //otherwise, if the year didn't change, then look at the month
-            //if the the previous MONTH is less than the current month, then the day MUST HAVE changed
-            else if(previousDateTime.Month < currentDateTime.Month)
-            {
-                //call method of day manager b/c day has changed
-            }
-
-            //otherwise, if year and month didnt change, then check diff between Days of the two DateTime structs
-            else if(previousDateTime.Day < currentDateTime.Day)
-            {
-                //call the method
-                Debug.Log("DAY CHANGED :D :D :D :D");
-            }
         }
+        //otherwise, if the year didn't change, then look at the month
+        //if the the previous MONTH is less than the current month, then the day MUST HAVE changed
+        else if(previousDateTime.Month < currentDateTime.Month)
+        {
+           so_DayManager.DayHasChanged();
+        }
+
+        //otherwise, if year and month didnt change, then check diff between Days of the two DateTime structs
+        else if(previousDateTime.Day < currentDateTime.Day)
+        {
+           so_DayManager.DayHasChanged();
+           Debug.Log("DAY CHANGED :D :D :D :D");
+        }
+       
 
         previousDateTime = currentDateTime;
 

@@ -25,11 +25,10 @@ public class TouchManager : MonoBehaviour {
 
     private RaycastShoot raycastShoot;
   
-
-    // Use this for initialization
     void Start()
     {
-
+        //multitouch is false because want to be able to aim then shoot - if true then aiming while shooting will cause glitch
+        Input.multiTouchEnabled = false;
         raycastShoot = gun.GetComponent<RaycastShoot>();
        
         //store original rotation
@@ -38,7 +37,6 @@ public class TouchManager : MonoBehaviour {
         rotY = originRot.y;
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -51,7 +49,6 @@ public class TouchManager : MonoBehaviour {
             {
 
             }*/
-
 
             //if touch has just begun
             if(touch.phase == TouchPhase.Began)
@@ -69,7 +66,7 @@ public class TouchManager : MonoBehaviour {
                 //subrated current rotations by 
                 rotX -= deltaY * Time.deltaTime * rotSpeed * dir;
                 rotY += deltaX * Time.deltaTime * rotSpeed * dir;
-                //clamp rotation so it can't go past certain angles in each direction
+                //clamp rotation so it can't go past certain angles in each direction (only want them to look forward and to sides)
                 rotX = Mathf.Clamp(rotX, -60.0f, 65.0f);
                 rotY = Mathf.Clamp(rotY, -75.0f, 75.0f);
 
@@ -90,37 +87,6 @@ public class TouchManager : MonoBehaviour {
 
         }
 
-
-
-        /*
-        if (Input.touchCount > 0)
-        {
-
-            myTouch = Input.GetTouch(0);
-            //strTouchPosition = myTouch.position.ToString();
-            //touchText.text = "Touch x Position: " + myTouch.position.x
-            //touchText.text = "Touch Position: " + myTouch.position.ToString();
-
-            Vector3 touchPosFar = new Vector3(myTouch.position.x,
-                                   myTouch.position.y,
-                                   Camera.main.farClipPlane);
-            Vector3 touchPosNear = new Vector3(myTouch.position.x,
-                                               myTouch.position.y,
-                                               Camera.main.nearClipPlane);
-
-            Vector3 worldPosFar = Camera.main.ScreenToWorldPoint(touchPosFar);
-            Vector3 worldPosNear = Camera.main.ScreenToWorldPoint(touchPosNear);
-
-            Debug.DrawRay(worldPosNear, worldPosFar - worldPosNear, Color.green);
-
-            //rotate camera to look at where you're touching?
-            //fpsCamera.transform.LookAt(worldPosFar);
-            
-            fpsCamera.transform.rotation = Quaternion.LookRotation(worldPosFar);
-
-
-        }
-        */
     }
 
 
@@ -136,3 +102,13 @@ public class TouchManager : MonoBehaviour {
 
 
 }
+
+/* Tutorial used for swipe touch camera movement:
+ * https://www.youtube.com/watch?v=zW1lxrgHgG8&t=1081s
+ * https://unity3d.com/learn/tutorials/topics/mobile-touch/multi-touch-input
+ * Tutorials on touch input:
+ * https://www.youtube.com/watch?v=uUIXFL2ic7k&t=872s
+ * https://www.youtube.com/watch?v=SrCUO46jcxk&t=158s
+ * FPS camera aim movement:
+ * https://www.youtube.com/watch?v=blO039OzUZc&t=1153s
+ */

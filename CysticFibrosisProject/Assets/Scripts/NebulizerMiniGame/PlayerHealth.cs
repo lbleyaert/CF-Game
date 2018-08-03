@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour {
 	void Update () {
         if (damaged)
         {
-            Debug.Log("Player was hit!!");
+            //Debug.Log("Player was hit!!");
         }
 
 	}
@@ -57,3 +57,8 @@ public class PlayerHealth : MonoBehaviour {
 
 
 }//end of PlayerHealth script
+
+
+/*Unity tutorial used for player health:
+ * https://unity3d.com/learn/tutorials/projects/survival-shooter/player-health?playlist=17144
+ */

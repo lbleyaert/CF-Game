@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour {
 
+    public SO_Task so_NebTask;
+
     private float pauseSeconds = 3.0f;
 
     public PlayerHealth playerHealth;
@@ -23,6 +25,7 @@ public class GameOverManager : MonoBehaviour {
         if(playerHealth.currentHealth <= 0)
         {
             anim.SetTrigger("GameOver");
+            so_NebTask.TaskComplete();
             //wait a few seconds, then go to next scene
             StartCoroutine(BackToTownScene());
         }		
@@ -36,7 +39,8 @@ public class GameOverManager : MonoBehaviour {
     }
 
 
-
-
-
 }
+
+/*Unity tutorial used for health UI:
+ * https://unity3d.com/learn/tutorials/projects/survival-shooter/health-hud?playlist=17144
+ */

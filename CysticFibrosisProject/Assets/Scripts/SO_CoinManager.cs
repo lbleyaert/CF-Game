@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu]
 public class SO_CoinManager : ScriptableObject {
 
     public int numOfCoins;

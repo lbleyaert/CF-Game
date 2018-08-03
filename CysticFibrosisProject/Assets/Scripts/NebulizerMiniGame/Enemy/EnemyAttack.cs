@@ -55,7 +55,7 @@ public class EnemyAttack : MonoBehaviour {
         }
         if(playerHealth.currentHealth <= 0)
         {
-            Debug.Log("Player is dead!");
+            //Debug.Log("no more health - end of game!");
         }
 
     }
@@ -72,8 +72,9 @@ public class EnemyAttack : MonoBehaviour {
         }
     }   
 
-
-
-
-
 }//end of EnemyAttack script
+
+/*Unity tutorial used for enemy scripts: 
+ * https://unity3d.com/learn/tutorials/projects/survival-shooter/harming-enemies?playlist=17144
+ * https://unity3d.com/learn/tutorials/projects/survival-shooter/player-health?playlist=17144
+ */

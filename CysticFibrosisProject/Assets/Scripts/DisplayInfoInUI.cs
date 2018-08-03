@@ -14,6 +14,7 @@ public class DisplayInfoInUI : MonoBehaviour {
     public SO_DayManager so_DayManager;
     //needs to communicate with the SO_TaskManager to get information about how many tasks are complete (and total num of tasks)
     public SO_TaskManager so_TaskManager;
+    public SO_CoinManager so_CoinManager;
 
     public Text streakText;
     public Text coinText;
@@ -32,6 +33,8 @@ public class DisplayInfoInUI : MonoBehaviour {
         percentage = (int) (((float)so_TaskManager.NumOfTasksComplete / so_TaskManager.taskList.Count) * 100.00);
         progressText.text = percentage + "% Done Today!";
         Debug.Log(percentage + "% of tasks completed");
+
+        coinText.text = "Coins: " + so_CoinManager.numOfCoins;
     }
 }
 

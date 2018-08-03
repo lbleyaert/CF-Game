@@ -6,9 +6,12 @@ using UnityEngine;
 public class SO_TaskManager : ScriptableObject {
 
     //currently there is only one task (the nebulizer game)
-    //when a task (minigame) is added, this number should be increased MANUALLY by 1 in the inspector 
-    //public int totalNumTasks;
+    //when a task (minigame) is added, increase list size and add the SO task instance
     public List<SO_Task> taskList;
+
+    //access coin manager so you can add coins when tasks are completed
+    public SO_CoinManager so_CoinManager;
+
     [SerializeField]
     private int numOfTasksComplete = 0;
     public int NumOfTasksComplete
@@ -21,7 +24,8 @@ public class SO_TaskManager : ScriptableObject {
     {
         Debug.Log("Task Completed! var incremented by 1");
         numOfTasksComplete++;
-        Debug.Log("PROGRESS: " + NumOfTasksComplete + " out of " + taskList.Count);
+        so_CoinManager.AddCoins(10);
+       // Debug.Log("PROGRESS: " + NumOfTasksComplete + " out of " + taskList.Count);
     }
 	
 
